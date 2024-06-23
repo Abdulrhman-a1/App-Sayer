@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sayeer/utils/constants/colors.dart';
 import '../../../../utils/constants/sizes.dart';
 
 class TSectionHeading extends StatelessWidget {
@@ -39,7 +40,10 @@ class TSectionHeading extends StatelessWidget {
               if (showActionButton)
                 Padding(
                   padding: const EdgeInsets.only(left: 5),
-                  child: TextButton(onPressed: () {}, child: Text(buttonTitle)),
+                  child: TextButton(
+                      onPressed: () {},
+                      child: Text(buttonTitle,
+                          style: TextStyle(color: TColors.darkerGrey))),
                 ),
             ],
           ),
