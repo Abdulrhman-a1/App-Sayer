@@ -31,6 +31,7 @@ class TPromoSlider extends StatelessWidget {
       children: [
         CarouselSlider(
           options: CarouselOptions(
+              height: 140,
               viewportFraction: 1,
               onPageChanged: (index, _) =>
                   controller.updatePageIndicator(index)),
@@ -38,7 +39,7 @@ class TPromoSlider extends StatelessWidget {
               .map((banner) => GestureDetector(
                     onTap: banner.targetUrl,
                     child: TRoundedimage(
-                      height: 180,
+                      width: double.infinity,
                       imagmeUrl: banner.imageUrl,
                     ),
                   ))
