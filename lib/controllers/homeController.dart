@@ -1,6 +1,8 @@
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
+import 'package:sayeer/screens/Search/Searchscreen.dart';
 import 'package:sayeer/screens/home/home_screen.dart';
+
 
 class HomeController extends GetxController {
   static HomeController get Instance => Get.put(HomeController());
@@ -16,7 +18,7 @@ class HomeController extends GetxController {
   }
 
   void Searchbar() {
-    //ننقل لصفحة البحث
+        Get.to(() => Searchscreen());
   }
 
   void GoToCompany() {
