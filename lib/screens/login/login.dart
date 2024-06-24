@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'package:sayeer/controllers/Router/routers.dart';
+import 'package:sayeer/utils/helpers/extenstions.dart';
 import '../../common/widgets/gridenant_color/gradient_color.dart';
 import 'widgets/login_form.dart';
 import 'widgets/login_header.dart';
@@ -14,6 +16,7 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen> {
   final NavigationController _navigationController = NavigationController();
+  final formKey = GlobalKey<FormState>();
 
   @override
   void initState() {
@@ -36,7 +39,10 @@ class _LoginScreenState extends State<LoginScreen> {
               child: Column(
                 children: [
                   TLoginHeader(),
-                  TLoginForm(onSignIn: _navigationController.navigateToOTP),
+                  TLoginForm(
+                    onSignIn: () => context.pushNamed(Routers.OTP),
+                    formKey: formKey,
+                  ),
                 ],
               ),
             ),

@@ -5,7 +5,10 @@ import 'package:sayeer/screens/home/home_screen.dart';
 import 'package:sayeer/screens/login/login.dart';
 
 class AppRouter {
+
   Route genrateRoute(RouteSettings settings) {
+    final args = settings.arguments;
+
     switch (settings.name) {
       case Routers.home:
         return MaterialPageRoute(builder: (_) => HomeScreen());

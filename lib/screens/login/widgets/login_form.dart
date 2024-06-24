@@ -4,31 +4,20 @@ import '../../../../../utils/constants/colors.dart';
 import '../../../../../utils/constants/text_strings.dart';
 
 class TLoginForm extends StatelessWidget {
-  final VoidCallback onSignIn;
-
   const TLoginForm({
     required this.onSignIn,
     super.key,
+    required this.formKey,
   });
 
-  @override
-  Widget build(BuildContext context) {
-    return MedilContainer(onSignIn: onSignIn);
-  }
-}
-
-class MedilContainer extends StatelessWidget {
   final VoidCallback onSignIn;
-
-  const MedilContainer({
-    required this.onSignIn,
-    super.key,
-  });
+  final Key formKey;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       child: Form(
+        key: formKey,
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 70, horizontal: 20),
           child: Column(
