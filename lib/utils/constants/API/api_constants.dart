@@ -1,7 +1,8 @@
 class ApiConstants {
-  static const String apiBaseUrl = 'https://api.themoviedb.org/3/';
+  static const String apiBaseUrl =
+      '"https://your-mock-server-url.mock.pstmn.io"';
 
-  static const String login = 'auth/login';
+  // static const String login = 'auth/login';
 }
 
 class ApiErrors {

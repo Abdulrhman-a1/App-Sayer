@@ -1,9 +1,10 @@
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
+import 'package:sayeer/utils/constants/API/api_constants.dart';
 import '../models/car_offer.dart';
 part 'car_offers_api_service.g.dart';
 
-@RestApi(baseUrl: "https://api.dachbored.com")
+@RestApi(baseUrl: ApiConstants.apiBaseUrl)
 abstract class ApiService {
   factory ApiService(Dio dio, {String baseUrl}) = _ApiService;
 

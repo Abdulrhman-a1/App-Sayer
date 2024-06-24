@@ -1,20 +1,55 @@
 import 'package:dio/dio.dart';
+import 'package:sayeer/utils/constants/API/api_error_handler.dart';
+import 'package:sayeer/utils/constants/API/api_result.dart';
 import '../models/car.dart';
 import '../services/car_api_service.dart';
-
 
 class CarRepository {
   final ApiService _apiService;
 
   CarRepository(Dio dio) : _apiService = ApiService(dio);
 
-  Future<List<Car>> getCars() => _apiService.getCars();
+  Future<ApiResult<List<Car>>> getCars() async {
+    try {
+      final response = await _apiService.getCars();
+      return ApiResult.success(response);
+    } catch (e) {
+      return ApiResult.failure(ErrorHandler.handle(e));
+    }
+  }
 
-  Future<Car> getCarById(String id) => _apiService.getCarById(id);
+  Future<ApiResult<Car>> getCarById(String id) async {
+    try {
+      final response = await _apiService.getCarById(id);
+      return ApiResult.success(response);
+    } catch (e) {
+      return ApiResult.failure(ErrorHandler.handle(e));
+    }
+  }
 
-  Future<Car> addCar(Car car) => _apiService.addCar(car);
+  Future<ApiResult<Car>> addCar(Car car) async {
+    try {
+      final response = await _apiService.addCar(car);
+      return ApiResult.success(response);
+    } catch (e) {
+      return ApiResult.failure(ErrorHandler.handle(e));
+    }
+  }
 
-  Future<Car> updateCar(String id, Car car) => _apiService.updateCar(id, car);
+  Future<ApiResult<Car>> updateCar(String id, Car car) async {
+    try {
+      final response = await _apiService.updateCar(id, car);
+      return ApiResult.success(response);
+    } catch (e) {
+      return ApiResult.failure(ErrorHandler.handle(e));
+    }
+  }
 
-  Future<void> deleteCar(String id) => _apiService.deleteCar(id);
+  Future<void> deleteCar(String id) async {
+    try {
+      await ApiResult.success(_apiService.deleteCar(id));
+    } catch (e) {
+      ApiResult.failure(ErrorHandler.handle(e));
+    }
+  }
 }

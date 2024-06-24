@@ -1,9 +1,10 @@
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
+import 'package:sayeer/utils/constants/API/api_constants.dart';
 import '../models/dealership.dart';
 part 'dealership_api_service.g.dart';
 
-@RestApi(baseUrl: "https://api.dachbored.com")
+@RestApi(baseUrl: ApiConstants.apiBaseUrl)
 abstract class ApiService {
   factory ApiService(Dio dio, {String baseUrl}) = _ApiService;
 
@@ -17,7 +18,8 @@ abstract class ApiService {
   Future<Dealership> addDealership(@Body() Dealership dealership);
 
   @PUT("/dealerships/{id}")
-  Future<Dealership> updateDealership(@Path("id") String id, @Body() Dealership dealership);
+  Future<Dealership> updateDealership(
+      @Path("id") String id, @Body() Dealership dealership);
 
   @DELETE("/dealerships/{id}")
   Future<void> deleteDealership(@Path("id") String id);
