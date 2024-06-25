@@ -1,13 +1,12 @@
-import 'package:dio/dio.dart';
-import 'package:sayeer/data/services/car_brand_api_service.dart';
-import 'package:sayeer/utils/constants/API/api_error_handler.dart';
-import 'package:sayeer/utils/constants/API/api_result.dart';
-import '../models/car_brand.dart';
+import 'package:sayeer/data/models/car_brand.dart';
+import 'package:sayeer/data/networking/api_error_handler.dart';
+import 'package:sayeer/data/networking/api_result.dart';
+import 'package:sayeer/data/networking/api_service.dart';
 
 class CarBrandRepository {
   final ApiService _apiService;
 
-  CarBrandRepository(Dio dio) : _apiService = ApiService(dio);
+  CarBrandRepository(this._apiService);
 
   Future<ApiResult<List<CarBrand>>> getCarBrands() async {
     try {
@@ -48,8 +47,7 @@ class CarBrandRepository {
 
   Future<ApiResult<void>> deleteCarBrand(String id) async {
     try {
-      await _apiService.deleteCarBrand(id);
-      return ApiResult.success(null);
+      return ApiResult.success(await _apiService.deleteCarBrand(id));
     } catch (e) {
       return ApiResult.failure(ErrorHandler.handle(e));
     }

@@ -1,13 +1,12 @@
-import 'package:dio/dio.dart';
-import 'package:sayeer/data/services/dealership_api_service.dart';
-import 'package:sayeer/utils/constants/API/api_error_handler.dart';
-import 'package:sayeer/utils/constants/API/api_result.dart';
-import '../models/dealership.dart';
+import 'package:sayeer/data/models/dealership.dart';
+import 'package:sayeer/data/networking/api_error_handler.dart';
+import 'package:sayeer/data/networking/api_result.dart';
+import 'package:sayeer/data/networking/api_service.dart';
 
 class DealershipRepository {
   final ApiService _apiService;
 
-  DealershipRepository(Dio dio) : _apiService = ApiService(dio);
+  DealershipRepository(this._apiService);
 
   Future<ApiResult<List<Dealership>>> getDealerships() async {
     try {
@@ -46,11 +45,11 @@ class DealershipRepository {
     }
   }
 
-  Future<void> deleteDealership(String id) async {
+  Future<ApiResult<void>> deleteDealership(String id) async {
     try {
-      await ApiResult.success(_apiService.deleteDealership(id));
+     return await ApiResult.success(_apiService.deleteDealership(id));
     } catch (e) {
-      ApiResult.failure(ErrorHandler.handle(e));
+      return ApiResult.failure(ErrorHandler.handle(e));
     }
   }
 }

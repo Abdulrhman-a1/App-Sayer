@@ -1,11 +1,12 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../../common/widgets/custom_shapes/containers/circular_container.dart';
-import '../../../common/widgets/images/t_rounded_image.dart';
-import '../../../../../utils/constants/colors.dart';
-import '../../../../../utils/constants/sizes.dart';
-import '../../../controllers/homeController.dart';
+import 'package:sayeer/common/widgets/custom_shapes/containers/circular_container.dart';
+import 'package:sayeer/common/widgets/images/t_rounded_image.dart';
+import 'package:sayeer/controllers/homeController.dart';
+import 'package:sayeer/utils/constants/colors.dart';
+import 'package:sayeer/utils/constants/sizes.dart';
+
 
 // Define a model for the banner
 class BannerModel {
