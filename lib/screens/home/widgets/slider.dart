@@ -7,7 +7,6 @@ import '../../../../../utils/constants/colors.dart';
 import '../../../../../utils/constants/sizes.dart';
 import '../../../controllers/homeController.dart';
 
-// Define a model for the banner
 class BannerModel {
   final String imageUrl;
   final VoidCallback targetUrl;

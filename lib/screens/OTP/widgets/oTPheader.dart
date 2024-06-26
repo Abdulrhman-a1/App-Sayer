@@ -11,6 +11,7 @@ class OTPHeader extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
+          const SizedBox(height: 16),
           Text(
             TTexts.confirmPhoneNum,
             style: Theme.of(context).textTheme.headlineMedium,
@@ -21,12 +22,6 @@ class OTPHeader extends StatelessWidget {
             'تم إرسال كود على الرقم ( 0542772934 )',
             style: Theme.of(context).textTheme.titleSmall,
             textAlign: TextAlign.center,
-          ),
-          const SizedBox(height: 32),
-          Image(
-            height: 129.91,
-            image: AssetImage(
-                'assets/images/on_boarding_images/I_Verifiy_PNum.png'),
           ),
           const SizedBox(height: 32),
           Text(

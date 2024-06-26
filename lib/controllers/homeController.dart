@@ -1,8 +1,8 @@
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
+import 'package:sayeer/screens/Fav/Favorite.dart';
 import 'package:sayeer/screens/Search/Searchscreen.dart';
 import 'package:sayeer/screens/home/home_screen.dart';
-
 
 class HomeController extends GetxController {
   static HomeController get Instance => Get.put(HomeController());
@@ -18,7 +18,7 @@ class HomeController extends GetxController {
   }
 
   void Searchbar() {
-        Get.to(() => Searchscreen());
+    Get.to(() => Searchscreen());
   }
 
   void GoToCompany() {
@@ -34,8 +34,7 @@ class HomeController extends GetxController {
         //ننقل اليوزر لصفحة السيارات
         break;
       case 2:
-
-        //ننقل اليوزر للمفضلة
+        Get.to(() => FavouriteScreen());
         break;
       case 3:
         //ننقل اليوزر لحسابه
