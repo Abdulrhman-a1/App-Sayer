@@ -44,8 +44,10 @@ class TTexts {
   static const String resendEmailIn = "Resend email in";
 
   // -- Authentication Headings
-  static const String loginTitle = "سجل دخولك";
-  static const String loginSubTitle = "وابدا رحلتك مع ";
+  static const String loginTitle = "سجل دخولك و ابدأ رحلتك مع";
+  static const String loginsubTitle =
+      "قم بإدخال رقم الجوال لانشاء حسابك في منصة ساير ";
+  static const String Verify = " سنقوم بإرسال رمز تحقق مكون من 4 أرقام";
   static const String signupTitle = "Let’s create your account";
   static const String forgetPasswordTitle = "Forget password";
   static const String forgetPasswordSubTitle =
