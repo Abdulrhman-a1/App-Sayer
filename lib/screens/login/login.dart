@@ -5,7 +5,6 @@ import 'package:sayeer/utils/helpers/extenstions.dart';
 import '../../common/widgets/gridenant_color/gradient_color.dart';
 import 'widgets/login_form.dart';
 import 'widgets/login_header.dart';
-import '../../controllers/signInController.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -15,7 +14,6 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  final NavigationController _navigationController = NavigationController();
   final formKey = GlobalKey<FormState>();
 
   @override

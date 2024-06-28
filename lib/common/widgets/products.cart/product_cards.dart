@@ -16,8 +16,8 @@ class TProductCardVertical extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 285,
-      width: 245,
+      height: 300,
+      width: 270,
       padding: EdgeInsets.all(10),
       decoration: BoxDecoration(
         boxShadow: [TShadowStlye.verticalProductShadow],

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:sayeer/screens/Search/Result.dart';
+import 'package:sayeer/utils/constants/colors.dart';
 
 class Searchscreen extends StatefulWidget {
   @override
@@ -36,7 +38,7 @@ class _SearchscreenState extends State<Searchscreen> {
                     ),
                   ],
                 ),
-                const SizedBox(height: 8),
+                const SizedBox(height: 16),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 4),
                   child: TSearchContainer(
@@ -49,6 +51,28 @@ class _SearchscreenState extends State<Searchscreen> {
                   child: Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 12.0),
                     child: _buildPanel(),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 12.0, vertical: 20.0),
+                ),
+                SizedBox(
+                  width: double.infinity,
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => ResultScreen()),
+                      );
+                    },
+                    child: Text(
+                      'مؤقت يا عبدالرحمن',
+                      style: Theme.of(context)
+                          .textTheme
+                          .titleSmall!
+                          .apply(color: TColors.white),
+                    ),
                   ),
                 ),
               ],
@@ -99,9 +123,6 @@ class Item {
   bool isExpanded;
 }
 
-//This List accept to Paramater 1) Title: name of the header!
-//2) Value: This value can be anything as designed in figma
-//3) Value can be dynamic and static from here.
 List<Item> generateItems() {
   return [
     Item(

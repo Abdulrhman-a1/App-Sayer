@@ -37,12 +37,16 @@ class HomeScreen extends StatelessWidget {
                         BannerModel(
                             imageUrl: TImages.promoBannerMahtar,
                             targetUrl: () => Get.to(() => MahtarScreen())),
+                        BannerModel(
+                            imageUrl: TImages.promoBannerSayerOffer,
+                            targetUrl: () => Get.to(() => HomeScreen())),
                       ],
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.symmetric(
-                      vertical: TSizes.defaultSpace,
+                    padding: const EdgeInsets.only(
+                      top: TSizes.xxs,
+                      bottom: TSizes.defaultSpace,
                     ),
                     child: CustomSection(),
                   ),
@@ -57,7 +61,8 @@ class HomeScreen extends StatelessWidget {
           NavigationDestination(icon: Icon(Iconsax.home), label: 'الرئيسية'),
           NavigationDestination(icon: Icon(Iconsax.car), label: 'السيارات'),
           NavigationDestination(icon: Icon(Iconsax.heart), label: 'المفضلة'),
-          NavigationDestination(icon: Icon(Iconsax.award4), label: 'العروض'),
+          NavigationDestination(
+              icon: Icon(Iconsax.discount_shape), label: 'العروض'),
         ],
         onDestinationSelected: (index) {
           controller.handleBottomNavigation(index);
