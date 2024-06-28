@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:sayeer/controllers/Router/routers.dart';
 import 'package:sayeer/utils/helpers/extenstions.dart';
-import '../../common/widgets/gridenant_color/gradient_color.dart';
+import '/common/widgets/gridenant_color/gradient_color.dart';
 import 'widgets/login_form.dart';
 import 'widgets/login_header.dart';
 

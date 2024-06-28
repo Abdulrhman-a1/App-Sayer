@@ -46,7 +46,7 @@
 		</data>
 		<key>Frameworks/App.framework/App</key>
 		<data>
-		GorZa2TyAW02OPOXL3SLEmWyfkQ=
+		EgC1irUhAAHcAwxT3k5BQjgH2l8=
 		</data>
 		<key>Frameworks/App.framework/Info.plist</key>
 		<data>
@@ -54,23 +54,23 @@
 		</data>
 		<key>Frameworks/App.framework/_CodeSignature/CodeResources</key>
 		<data>
-		1ga+FRHwl3B6GGifGDSWdADgzOY=
+		f6jKSMHbhS0tVWXYLyf53ESuJKo=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.bin</key>
 		<data>
-		Iud7iYG55ica/6C1UPLl7hK9kRY=
+		dCmNQbC27HTwSV2XKAliIiMuEyo=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
 		<data>
-		roERqP0OFa5X8qmA28znzgOz94I=
+		RHzNcMu51gaGgfpmLt+TRuQ47XU=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/FontManifest.json</key>
 		<data>
-		9sOqV+WLl6wEwFTYYUZmBpAxjxA=
+		7czDYHjsv+J89rFyiok7rZ0OK1Q=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/NOTICES.Z</key>
 		<data>
-		fPPH+k5M7161gsLKHUi0QVCTzwQ=
+		lNfEa1k58cWRhuZTA+OBz4M3Keg=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/assets/fonts/Montserrat-Arabic-Bold.ttf</key>
 		<data>
@@ -262,11 +262,7 @@
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/kernel_blob.bin</key>
 		<data>
-		5xJNKMJZoaRtbi5KfzUCTujK3ZY=
-		</data>
-		<key>Frameworks/App.framework/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
-		<data>
-		Bvk+P1ykE1PGRdktwgwDyz6AOqM=
+		IhonEBzCL3bI0VlbiPApFTH2its=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/packages/iconsax/lib/assets/fonts/iconsax.ttf</key>
 		<data>
@@ -513,7 +509,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			K0BJDLOE+X0QlrOB/2cTq5D2rdRPycToeL1wU2QhLU4=
+			tLEjm89toTxZUVW9eaiWIeDybuELCF1wxIQKScdd5aM=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/Info.plist</key>
@@ -527,35 +523,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			3fuMKFr5FGMQkyU95kQCv0NKMweNLmYnsIYT0Nc7mTE=
+			/JyUU6xJPXM98IqUqhePDC9BaZuTJbm20y3ykPJMKFU=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.bin</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			hf5AEf0xpEQkWBLGfEoaNDbk1zMWtkWRXmLddyFWICE=
+			gV2YPDOSxyn0qwud415n/o5MBxjV3AnTfA49qQ9706M=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			gz0lImbAquVjsrOYPbIrqTFbfUPUivOzphQmLX+ohoo=
+			gF1yNzIL1yP+TUOpVrIyU/bwPsvCNJeKXv924VPGAS0=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/FontManifest.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			FVXK7QzJi2hCAYzyNoLqX3YqcbLRckDPq6Jz1Ix7coM=
+			IVJEWL+BvSC+IGkbw94TAPEUXNcPk6yHIou7JK9olN4=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/NOTICES.Z</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Z1YwTqgsdb34BwE6HtlF/QH9vaLXYQFBFKibbiEGA3o=
+			Wrxxdjp29XC4x+231aXgFIoo3Bq/o9YYhOUQJFP25UI=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/assets/fonts/Montserrat-Arabic-Bold.ttf</key>
@@ -891,14 +887,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			/ZFFCqutaJVclnMoMRWiZeqPZkwRTBp86qEuo5PG2O0=
-			</data>
-		</dict>
-		<key>Frameworks/App.framework/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			Z8RP6Rg7AC553ef2l34piGYcmj5KPF/OloeH79vtgjw=
+			RXZBNXbVoxaz68XKDhrZGQQqI+5R03Utrniu9QPsrSI=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/packages/iconsax/lib/assets/fonts/iconsax.ttf</key>
