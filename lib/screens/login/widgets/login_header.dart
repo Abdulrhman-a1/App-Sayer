@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sayeer/utils/constants/colors.dart';
+import 'package:sayeer/utils/constants/sizes.dart';
 import 'package:sayeer/utils/constants/text_strings.dart';
 
 class TLoginHeader extends StatelessWidget {
@@ -7,6 +8,7 @@ class TLoginHeader extends StatelessWidget {
     super.key,
   });
 
+  // all size should be predefined
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -20,7 +22,8 @@ class TLoginHeader extends StatelessWidget {
           ),
           const SizedBox(height: 30),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20.0),
+            padding:
+                const EdgeInsets.symmetric(horizontal: TSizes.defaultSpace),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
@@ -28,7 +31,10 @@ class TLoginHeader extends StatelessWidget {
                   TextSpan(
                     text: '${TTexts.loginTitle} ',
                     style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                        color: Color(0xFF64748B), fontWeight: FontWeight.bold),
+                        //Color should be predefined
+                        color: Color(0xFF64748B),
+                        // Tcolors.darkGrey, Suggestions color
+                        fontWeight: FontWeight.bold),
                     children: [
                       TextSpan(
                         text: '${TTexts.appName}',
@@ -47,8 +53,11 @@ class TLoginHeader extends StatelessWidget {
                 Text(
                   '${TTexts.loginsubTitle}\n${TTexts.Verify}',
                   textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                        //Color should be predefined
                         color: Color(0xFF112D4E),
+                        // Suggestions color
+                        //color: TColors.darkGrey,
                       ),
                 ),
               ],

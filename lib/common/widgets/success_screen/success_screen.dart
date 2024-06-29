@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sayeer/common/styles/widgets/spacing_styles.dart';
-import 'package:sayeer/common/widgets/gridenant_color/gradient_color.dart';
+import 'package:sayeer/common/widgets/defultScreen/gradient_color.dart';
 import '../../../../utils/constants/sizes.dart';
 import '../../../../utils/constants/text_strings.dart';
 import '../../../../utils/helpers/helper_functions.dart';

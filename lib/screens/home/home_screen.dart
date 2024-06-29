@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:sayeer/common/widgets/gridenant_color/gradient_color.dart';
+import 'package:sayeer/common/widgets/defultScreen/gradient_color.dart';
 import 'package:sayeer/common/widgets/appbar/Drawer/DrawerMenu.dart';
 import 'package:sayeer/controllers/homeController.dart';
 import 'mahtar_screen.dart';

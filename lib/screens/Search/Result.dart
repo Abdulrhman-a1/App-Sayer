@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sayeer/common/widgets/products.cart/product_cards.dart';
 import 'package:sayeer/screens/Search/Filter.dart';
-import 'package:sayeer/utils/constants/sizes.dart';
 // import 'package:sayeer/common/widgets/products.cart/product_cards.dart';
 // import 'package:sayeer/utils/constants/sizes.dart';
 
