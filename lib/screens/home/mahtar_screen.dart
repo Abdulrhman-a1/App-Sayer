@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:sayeer/common/widgets/defultScreen/gradient_color.dart';
-import 'package:sayeer/controllers/Router/app_router.dart';
-import 'package:sayeer/controllers/Router/routers.dart';
 import 'package:sayeer/screens/Search/Searchscreen.dart';
-import 'package:sayeer/utils/constants/colors.dart';
 import 'package:sayeer/utils/constants/sizes.dart';
 
 import '../../common/widgets/defultScreen/white_pattern.dart';
@@ -30,10 +26,30 @@ class _MahtarScreenState extends State<MahtarScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: TSizes.lg * 5),
-              Text(
-                'ادخل معلومات الدخل الخاص بك لنقدم لك عروض تناسب دخلك ومعرفة القسط الشهري المستحق لتساعدك في اتخاذ قرار الشراء',
-                style: Theme.of(context).textTheme.titleMedium,
+              SizedBox(height: TSizes.lg * 2),
+              Row(
+                children: [
+                  IconButton(
+                      icon: Icon(Iconsax.arrow_right_3), onPressed: () {}),
+                ],
+              ),
+              SizedBox(height: TSizes.lg),
+              RichText(
+                text: TextSpan(
+                  text: 'محتار!\n',
+                  style: Theme.of(context).textTheme.headlineMedium,
+                  children: [
+                    TextSpan(
+                      text: 'ساير حلها، ',
+                      style: Theme.of(context).textTheme.headlineSmall,
+                    ),
+                    TextSpan(
+                      text:
+                          'قم بإدخال معلومات دخلك لمساعدتك في اختبار السيارة المناسبة لك',
+                      style: Theme.of(context).textTheme.titleSmall,
+                    ),
+                  ],
+                ),
               ),
               SizedBox(height: TSizes.spaceBtwSections),
               TextField(
@@ -60,6 +76,7 @@ class _MahtarScreenState extends State<MahtarScreen> {
               if (isCheckboxChecked)
                 TextField(
                   decoration: InputDecoration(
+                    prefixIcon: Icon(Iconsax.moneys),
                     labelText: 'مجموع الالتزامات',
                   ),
                   onChanged: (value) {
