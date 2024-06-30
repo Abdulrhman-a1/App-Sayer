@@ -21,7 +21,7 @@ class TGradientColor extends StatelessWidget {
             end: Alignment(0, -0.2),
             colors: [
               TColors.GradientStart,
-              TColors.Gradientend,
+              TColors.white,
             ],
           ),
         ),

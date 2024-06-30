@@ -122,7 +122,7 @@ class ResultScreen extends StatelessWidget {
                 //           ),
                 //           child: SizedBox(
                 //             height: 260,
-                //             child: TProductCardVertical(),
+                //             child: TProductCardHorizontal(),
                 //           ),
                 //         );
                 //       }),

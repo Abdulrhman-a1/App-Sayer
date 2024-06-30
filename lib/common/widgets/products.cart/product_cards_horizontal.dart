@@ -10,8 +10,8 @@ import '../../styles/widgets/shadows.dart';
 import '../texts/product_price_text.dart';
 import '../texts/product_title_text.dart';
 
-class TProductCardVertical extends StatelessWidget {
-  const TProductCardVertical({super.key});
+class TProductCardHorizontal extends StatelessWidget {
+  const TProductCardHorizontal({super.key});
 
   @override
   Widget build(BuildContext context) {

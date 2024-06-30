@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:sayeer/screens/Search/Searchscreen.dart';
 import 'package:sayeer/utils/constants/sizes.dart';
+import 'package:sayeer/utils/helpers/extenstions.dart';
 
 import '../../common/widgets/defultScreen/white_pattern.dart';
 
@@ -30,7 +31,10 @@ class _MahtarScreenState extends State<MahtarScreen> {
               Row(
                 children: [
                   IconButton(
-                      icon: Icon(Iconsax.arrow_right_3), onPressed: () {}),
+                      icon: Icon(Icons.arrow_back),
+                      onPressed: () {
+                        context.pop();
+                      }),
                 ],
               ),
               SizedBox(height: TSizes.lg),
