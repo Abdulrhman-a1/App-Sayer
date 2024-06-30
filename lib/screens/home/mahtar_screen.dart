@@ -30,8 +30,6 @@ class _MahtarScreenState extends State<MahtarScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // image
-              //Image.asset('')
               SizedBox(height: TSizes.lg * 5),
               Text(
                 'ادخل معلومات الدخل الخاص بك لنقدم لك عروض تناسب دخلك ومعرفة القسط الشهري المستحق لتساعدك في اتخاذ قرار الشراء',
