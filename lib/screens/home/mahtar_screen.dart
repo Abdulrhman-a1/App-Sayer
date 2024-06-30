@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:sayeer/common/widgets/gridenant_color/gradient_color.dart';
+import 'package:sayeer/screens/Search/Searchscreen.dart';
 import 'package:sayeer/utils/constants/sizes.dart';
+import 'package:sayeer/utils/helpers/extenstions.dart';
+
+import '../../common/widgets/defultScreen/white_pattern.dart';
 
 class MahtarScreen extends StatefulWidget {
   const MahtarScreen();
@@ -11,96 +15,86 @@ class MahtarScreen extends StatefulWidget {
 }
 
 class _MahtarScreenState extends State<MahtarScreen> {
-  List<String> userInput = [
-    '',
-    '',
-    '',
-    '2'
-  ]; // Set a default value for the DropdownButton
+  bool isCheckboxChecked = false;
+  String additionalInfo = '';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: TGradientColor(
+      body: TWhitePettern(
         child: Container(
           padding: const EdgeInsets.all(TSizes.defaultSpace),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // SizedBox(height: 200),
+              SizedBox(height: TSizes.lg * 2),
+              Row(
+                children: [
+                  IconButton(
+                      icon: Icon(Icons.arrow_back),
+                      onPressed: () {
+                        context.pop();
+                      }),
+                ],
+              ),
+              SizedBox(height: TSizes.lg),
+              RichText(
+                text: TextSpan(
+                  text: 'محتار!\n',
+                  style: Theme.of(context).textTheme.headlineMedium,
+                  children: [
+                    TextSpan(
+                      text: 'ساير حلها، ',
+                      style: Theme.of(context).textTheme.headlineSmall,
+                    ),
+                    TextSpan(
+                      text:
+                          'قم بإدخال معلومات دخلك لمساعدتك في اختبار السيارة المناسبة لك',
+                      style: Theme.of(context).textTheme.titleSmall,
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(height: TSizes.spaceBtwSections),
               TextField(
                 decoration: InputDecoration(
                   prefixIcon: Icon(Iconsax.money),
-                  labelText: 'Salary',
+                  labelText: 'الراتب الشهري',
                 ),
-                onChanged: (value) {
-                  userInput[0] = value;
-                },
+                onChanged: (value) {},
               ),
               SizedBox(height: TSizes.spaceBtwItems),
-              CheckboxListTile(
-                title: Text('Commitments (if any)'),
-                value: userInput[1] == 'true',
-                onChanged: (value) {
-                  setState(() {
-                    userInput[1] = value != null && value ? 'true' : '';
-                  });
-                },
-              ),
-              if (userInput[1] == 'true')
-                Column(
-                  children: [
-                    TextField(
-                      decoration: InputDecoration(
-                        labelText: 'Commitments Amount',
-                      ),
-                      onChanged: (value) {
-                        userInput[2] = value;
-                      },
-                    ),
-                    SizedBox(height: TSizes.spaceBtwItems),
-                  ],
-                ),
-              InputDecorator(
-                decoration: InputDecoration(
-                  labelText: 'Salary Transfer Entity',
-                  contentPadding:
-                      EdgeInsets.symmetric(horizontal: 12, vertical: 4),
-                  border: OutlineInputBorder(),
-                ),
-                child: DropdownButtonHideUnderline(
-                  child: DropdownButton<String>(
-                    value: userInput[3],
-                    onChanged: (value) {
+              Row(
+                children: [
+                  Checkbox(
+                    value: isCheckboxChecked,
+                    onChanged: (bool? value) {
                       setState(() {
-                        userInput[3] = value ?? '';
+                        isCheckboxChecked = value ?? false;
                       });
                     },
-                    items: [
-                      DropdownMenuItem(
-                        value: 'Entity 1',
-                        child: Text('Entity 1'),
-                      ),
-                      DropdownMenuItem(
-                        value: 'Entity 2',
-                        child: Text('Entity 2'),
-                      ),
-                      DropdownMenuItem(
-                        value: 'Entity 3',
-                        child: Text('Entity 3'),
-                      ),
-                    ],
                   ),
-                ),
+                  Text('هل لديك التزامات مادية؟'),
+                ],
               ),
-              SizedBox(height: TSizes.spaceBtwItems),
+              if (isCheckboxChecked)
+                TextField(
+                  decoration: InputDecoration(
+                    prefixIcon: Icon(Iconsax.moneys),
+                    labelText: 'مجموع الالتزامات',
+                  ),
+                  onChanged: (value) {
+                    setState(() {
+                      additionalInfo = value;
+                    });
+                  },
+                ),
+              SizedBox(height: TSizes.spaceBtwInputFields),
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: () {
-                    // Save userInput list
-                    print(userInput);
-                  },
-                  child: Text('Save'),
+                  onPressed: () => Get.to(() => Searchscreen()),
+                  child: Text('بحث'),
                 ),
               ),
             ],

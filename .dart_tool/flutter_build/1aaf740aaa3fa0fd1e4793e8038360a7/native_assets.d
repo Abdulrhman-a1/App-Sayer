@@ -1,1 +1,0 @@
- C:\\Users\\Welcome\\Documents\\GitHub\\App-Sayer\\.dart_tool\\flutter_build\\1aaf740aaa3fa0fd1e4793e8038360a7\\native_assets.yaml: 

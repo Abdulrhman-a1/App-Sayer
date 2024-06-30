@@ -5,7 +5,7 @@ import 'package:sayeer/common/widgets/NavBar/CustomeNav.dart';
 import 'package:sayeer/controllers/homeController.dart';
 import 'package:sayeer/screens/Search/Searchscreen.dart';
 import 'package:sayeer/screens/home/home_screen.dart';
-import '../../../../common/widgets/gridenant_color/gradient_color.dart';
+import '../../common/widgets/defultScreen/gradient_color.dart';
 import '../../../../utils/constants/sizes.dart';
 
 class FavouriteScreen extends StatefulWidget {
@@ -22,46 +22,44 @@ class _FavouriteScreenState extends State<FavouriteScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        child: TGradientColor(
-          child: Column(
-            children: [
-              SafeArea(
-                bottom: false,
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                  child: Stack(
-                    children: [
-                      Align(
-                        alignment: Alignment.center,
-                        child: Text(
-                          'السيارات المفضلة',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 16,
-                          ),
-                          textAlign: TextAlign.center,
+      body: TGradientColor(
+        child: Column(
+          children: [
+            SafeArea(
+              bottom: false,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                child: Stack(
+                  children: [
+                    Align(
+                      alignment: Alignment.center,
+                      child: Text(
+                        'السيارات المفضلة',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 16,
                         ),
+                        textAlign: TextAlign.center,
                       ),
-                      Positioned(
-                        right: 0,
-                        top: 0,
-                        child: IconButton(
-                          icon: Icon(Icons.arrow_back, color: Colors.black),
-                          onPressed: () => Get.to(HomeScreen()),
-                        ),
+                    ),
+                    Positioned(
+                      right: 0,
+                      top: 0,
+                      child: IconButton(
+                        icon: Icon(Icons.arrow_back, color: Colors.black),
+                        onPressed: () => Get.to(HomeScreen()),
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ),
-              Expanded(
-                child: favoriteItems.isEmpty
-                    ? _buildEmptyState()
-                    : _buildFavoriteList(),
-              ),
-            ],
-          ),
+            ),
+            Expanded(
+              child: favoriteItems.isEmpty
+                  ? _buildEmptyState()
+                  : _buildFavoriteList(),
+            ),
+          ],
         ),
       ),
       bottomNavigationBar: Bar(
@@ -126,7 +124,7 @@ class _FavouriteScreenState extends State<FavouriteScreen> {
                   horizontal: TSizes.lg,
                   vertical: TSizes.md,
                 ),
-                // child: TProductCardVertical(),
+                // child: TProductCardHorizontal(),
               );
             },
           ),

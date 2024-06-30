@@ -1,4 +1,4 @@
-import 'package:sayeer/common/widgets/gridenant_color/gradient_color.dart';
+import 'package:sayeer/common/widgets/defultScreen/gradient_color.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../utils/constants/colors.dart';

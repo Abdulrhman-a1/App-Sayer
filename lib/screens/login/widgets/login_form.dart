@@ -26,7 +26,7 @@ class _TLoginFormState extends State<TLoginForm> {
       child: Form(
         key: widget.formKey,
         child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 20),
+          padding: const EdgeInsets.symmetric(horizontal: TSizes.defaultSpace),
           child: Column(
             children: [
               TextFormField(
@@ -54,9 +54,6 @@ class _TLoginFormState extends State<TLoginForm> {
                     ),
                   ),
                 ],
-              ),
-              SizedBox(
-                height: TSizes.spaceBtwInputFields,
               ),
               SizedBox(
                 height: TSizes.spaceBtwSections,

@@ -1,1 +1,0 @@
- /Users/abdulrhman/Downloads/GitHub/Sayer-application/.dart_tool/flutter_build/a6e9ab8fa2e6f35460d2b29d7b7abed1/native_assets.yaml: 
