@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:sayeer/common/widgets/NavBar/CustomeNav.dart';
+import 'package:sayeer/common/widgets/appbar/default_appbar.dart';
 import 'package:sayeer/controllers/homeController.dart';
 import 'package:sayeer/screens/Search/Searchscreen.dart';
 import 'package:sayeer/screens/home/home_screen.dart';
@@ -21,59 +22,43 @@ class _FavouriteScreenState extends State<FavouriteScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: TGradientColor(
-        child: Column(
-          children: [
-            SafeArea(
-              bottom: false,
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                child: Stack(
-                  children: [
-                    Align(
-                      alignment: Alignment.center,
-                      child: Text(
-                        'السيارات المفضلة',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 16,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                    Positioned(
-                      right: 0,
-                      top: 0,
-                      child: IconButton(
-                        icon: Icon(Icons.arrow_back, color: Colors.black),
-                        onPressed: () => Get.to(HomeScreen()),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            Expanded(
-              child: favoriteItems.isEmpty
-                  ? _buildEmptyState()
-                  : _buildFavoriteList(),
-            ),
-          ],
-        ),
+    return TGradientColor(
+      appBar: TDefaultAppbar(
+        showbackArrow: true,
       ),
-      bottomNavigationBar: Bar(
-        destinations: const [
-          NavigationDestination(icon: Icon(Iconsax.home), label: 'الرئيسية'),
-          NavigationDestination(icon: Icon(Iconsax.car), label: 'السيارات'),
-          NavigationDestination(icon: Icon(Iconsax.heart), label: 'المفضلة'),
-          NavigationDestination(
-              icon: Icon(Iconsax.discount_shape), label: 'العروض'),
+      child: Column(
+        children: [
+          Align(
+            alignment: Alignment.center,
+            child: Text(
+              'السيارات المفضلة',
+              style: Theme.of(context)
+                  .textTheme
+                  .headlineSmall!
+                  .copyWith(color: Colors.white),
+              textAlign: TextAlign.center,
+            ),
+          ),
+          Expanded(
+            child: favoriteItems.isEmpty
+                ? _buildEmptyState()
+                : _buildFavoriteList(),
+          ),
         ],
-        onDestinationSelected: (index) {
-          controller.handleBottomNavigation(index);
-        },
       ),
+      //   bottomNavigationBar:
+      // Bar(
+      //   destinations: const [
+      //     NavigationDestination(icon: Icon(Iconsax.home), label: 'الرئيسية'),
+      //     NavigationDestination(icon: Icon(Iconsax.car), label: 'السيارات'),
+      //     NavigationDestination(icon: Icon(Iconsax.heart), label: 'المفضلة'),
+      //     NavigationDestination(
+      //         icon: Icon(Iconsax.discount_shape), label: 'العروض'),
+      //   ],
+      //   onDestinationSelected: (index) {
+      //     controller.handleBottomNavigation(index);
+      //   },
+      // );
     );
   }
 

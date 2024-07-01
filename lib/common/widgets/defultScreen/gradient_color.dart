@@ -7,8 +7,10 @@ class TGradientColor extends StatelessWidget {
   const TGradientColor({
     super.key,
     required this.child,
+    this.appBar,
   });
   final Widget child;
+  final PreferredSizeWidget? appBar;
 
   @override
   Widget build(BuildContext context) {
@@ -25,6 +27,10 @@ class TGradientColor extends StatelessWidget {
             ],
           ),
         ),
-        child: child);
+        child: Scaffold(
+          backgroundColor: Colors.transparent,
+          appBar: appBar,
+          body: child,
+        ));
   }
 }
