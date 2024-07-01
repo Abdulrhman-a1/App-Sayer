@@ -11,6 +11,7 @@ class TImages {
   // -- Social Logos
   static const String google = "assets/logos/google-icon.png";
   static const String facebook = "assets/logos/facebook-icon.png";
+  static const String Sayerlogo = "assets/logos/Sayer_Logo.png";
 
   // -- Category Icons
   static const String TeotaIcon = "assets/icons/categories/Toyota_icon.png";
@@ -57,11 +58,10 @@ class TImages {
       "assets/images/animations/sammy-line-travel-backpack-with-passport-and-air-ticket.gif";
 
   // -- Products
-  
+
   static const String DodgeCharger = "assets/images/cars/DodgeCharger.png";
 
   // -- Product Reviews
-  
 
   //Banners
   static const String promoBannerMahtar =

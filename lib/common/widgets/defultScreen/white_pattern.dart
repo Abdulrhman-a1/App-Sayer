@@ -5,8 +5,10 @@ class TWhitePettern extends StatelessWidget {
   const TWhitePettern({
     super.key,
     required this.child,
+    this.appbar,
   });
   final Widget child;
+  final PreferredSizeWidget? appbar;
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +23,8 @@ class TWhitePettern extends StatelessWidget {
               ),
             ],
           ),
-          child,
+          Scaffold(
+              backgroundColor: Colors.transparent, appBar: appbar, body: child),
           Positioned(
             bottom: 0,
             child: Image(
