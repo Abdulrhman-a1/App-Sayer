@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:iconsax/iconsax.dart';
-import 'package:sayeer/common/widgets/NavBar/CustomeNav.dart';
+
 import 'package:sayeer/common/widgets/appbar/default_appbar.dart';
 import 'package:sayeer/controllers/homeController.dart';
 import 'package:sayeer/screens/Search/Searchscreen.dart';
-import 'package:sayeer/screens/home/home_screen.dart';
 import '../../common/widgets/defultScreen/gradient_color.dart';
 import '../../../../utils/constants/sizes.dart';
 

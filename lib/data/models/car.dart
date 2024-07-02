@@ -1,25 +1,26 @@
 import 'package:json_annotation/json_annotation.dart';
+import 'package:sayeer/utils/constants/enums.dart';
 part 'car.g.dart';
 
 @JsonSerializable()
 class Car {
-  final String id;
+  final int id;
+  final String BrandName;
   final String name;
-  final String type;
   final String model;
   final int year;
   final String image;
   final String countryOfOrigin;
-  final String carType;
+  final Enum carType;
   final double fuelEconomyRate;
-  final String fuelType;
+  final Enum fuelType;
   final int passengerSeatCount;
-  final String brandId;
+  final int brandId;
 
   Car({
+    required this.BrandName,
     required this.id,
     required this.name,
-    required this.type,
     required this.model,
     required this.year,
     required this.image,

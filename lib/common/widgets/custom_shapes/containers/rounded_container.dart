@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:sayeer/common/styles/widgets/shadows.dart';
-
 import '../../../../../utils/constants/colors.dart';
 import '../../../../../utils/constants/sizes.dart';
 

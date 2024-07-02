@@ -7,7 +7,10 @@ import 'package:sayeer/common/widgets/icons/t_circular_icon.dart';
 import 'package:sayeer/common/widgets/layouts/grid_layout.dart';
 import 'package:sayeer/common/widgets/products.cart/product_cards_horizontal.dart';
 import 'package:sayeer/common/widgets/products.cart/product_cards_vertical.dart';
+import 'package:sayeer/data/models/car.dart';
 import 'package:sayeer/screens/home/home_screen.dart';
+import 'package:sayeer/utils/constants/enums.dart';
+import 'package:sayeer/utils/constants/image_strings.dart';
 import 'package:sayeer/utils/constants/sizes.dart';
 
 class OffersScreen extends StatelessWidget {
@@ -40,7 +43,23 @@ class OffersScreen extends StatelessWidget {
                   TGridLayout(
                       maixAxisEctent: 230,
                       itemCount: 5,
-                      itemBuilder: (_, index) => TProductCardVertical())
+                      itemBuilder: (_, index) => TProductCardVertical(
+                            cars: [
+                              Car(
+                                  id: 1,
+                                  BrandName: 'Dodge',
+                                  name: 'Carger',
+                                  carType: CarType.Sedan,
+                                  model: 'R/T',
+                                  year: 2023,
+                                  image: TImages.DodgeCharger,
+                                  countryOfOrigin: 'Amrica',
+                                  fuelEconomyRate: 12.5,
+                                  fuelType: FuelType.gasoline,
+                                  passengerSeatCount: 5,
+                                  brandId: 1)
+                            ],
+                          ))
                 ],
               ),
             ),

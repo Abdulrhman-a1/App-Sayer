@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:sayeer/common/widgets/CarsList/BrandList.dart';
 import 'package:sayeer/common/widgets/products.cart/product_cards_horizontal.dart';
 import 'package:sayeer/common/widgets/texts/section_heading.dart';
+import 'package:sayeer/data/models/car.dart';
 import 'package:sayeer/utils/constants/colors.dart';
+import 'package:sayeer/utils/constants/enums.dart';
 import 'package:sayeer/utils/constants/image_strings.dart';
 import 'package:sayeer/utils/constants/sizes.dart';
 
@@ -52,7 +54,7 @@ class CustomSection extends StatelessWidget {
             height: 260,
             child: ListView.builder(
               clipBehavior: Clip.none,
-              shrinkWrap: false,
+              shrinkWrap: true,
               itemCount: 4,
               scrollDirection: Axis.horizontal,
               itemBuilder: (_, index) {
@@ -60,7 +62,24 @@ class CustomSection extends StatelessWidget {
                   padding: const EdgeInsets.only(
                     left: TSizes.md,
                   ),
-                  child: TProductCardHorizontal(),
+                  child: TProductCardHorizontal(
+                    showFavouriteIcon: true,
+                    cars: [
+                      Car(
+                          id: 1,
+                          BrandName: 'Dodge',
+                          name: 'Carger',
+                          carType: CarType.Sedan,
+                          model: 'R/T',
+                          year: 2023,
+                          image: TImages.DodgeCharger,
+                          countryOfOrigin: 'Amrica',
+                          fuelEconomyRate: 12.5,
+                          fuelType: FuelType.gasoline,
+                          passengerSeatCount: 5,
+                          brandId: 1)
+                    ],
+                  ),
                 );
               },
             ),
