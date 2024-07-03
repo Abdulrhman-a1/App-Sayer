@@ -20,42 +20,36 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final HomeController controller = HomeController.Instance;
 
-    return Scaffold(
+    return TGradientColor(
       drawer: DrawerMenu(),
-      body: Stack(
-        children: [
-          TGradientColor(
-            child: SingleChildScrollView(
-              child: Column(
-                children: [
-                  HomeSearch(),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: TSizes.defaultSpace,
-                    ),
-                    child: TPromoSlider(
-                      banners: [
-                        BannerModel(
-                            imageUrl: TImages.promoBannerMahtar,
-                            targetUrl: () => Get.to(() => MahtarScreen())),
-                        BannerModel(
-                            imageUrl: TImages.promoBannerSayerOffer,
-                            targetUrl: () => Get.to(() => OffersScreen())),
-                      ],
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(
-                      top: TSizes.xxs,
-                      bottom: TSizes.defaultSpace,
-                    ),
-                    child: CustomSection(),
-                  ),
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            HomeSearch(),
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: TSizes.defaultSpace,
+              ),
+              child: TPromoSlider(
+                banners: [
+                  BannerModel(
+                      imageUrl: TImages.promoBannerMahtar,
+                      targetUrl: () => Get.to(() => MahtarScreen())),
+                  BannerModel(
+                      imageUrl: TImages.promoBannerSayerOffer,
+                      targetUrl: () => Get.to(() => OffersScreen())),
                 ],
               ),
             ),
-          ),
-        ],
+            Padding(
+              padding: const EdgeInsets.only(
+                top: TSizes.xxs,
+                bottom: TSizes.defaultSpace,
+              ),
+              child: CustomSection(),
+            ),
+          ],
+        ),
       ),
       bottomNavigationBar: Bar(
         destinations: const [

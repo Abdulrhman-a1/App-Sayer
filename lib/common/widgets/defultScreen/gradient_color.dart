@@ -8,9 +8,13 @@ class TGradientColor extends StatelessWidget {
     super.key,
     required this.child,
     this.appBar,
+    this.drawer,
+    this.bottomNavigationBar,
   });
   final Widget child;
   final PreferredSizeWidget? appBar;
+  final Widget? drawer;
+  final Widget? bottomNavigationBar;
 
   @override
   Widget build(BuildContext context) {
@@ -28,6 +32,8 @@ class TGradientColor extends StatelessWidget {
           ),
         ),
         child: Scaffold(
+          bottomNavigationBar: bottomNavigationBar ?? null,
+          drawer: drawer ?? null,
           backgroundColor: Colors.transparent,
           appBar: appBar,
           body: child,

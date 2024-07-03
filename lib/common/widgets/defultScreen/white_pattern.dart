@@ -5,10 +5,14 @@ class TWhitePettern extends StatelessWidget {
   const TWhitePettern({
     super.key,
     required this.child,
-    this.appbar,
+    this.appBar,
+    this.drawer,
+    this.bottomNavigationBar,
   });
   final Widget child;
-  final PreferredSizeWidget? appbar;
+  final PreferredSizeWidget? appBar;
+  final Widget? drawer;
+  final Widget? bottomNavigationBar;
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +28,12 @@ class TWhitePettern extends StatelessWidget {
             ],
           ),
           Scaffold(
-              backgroundColor: Colors.transparent, appBar: appbar, body: child),
+            backgroundColor: Colors.transparent,
+            appBar: appBar,
+            body: child,
+            drawer: drawer ?? null,
+            bottomNavigationBar: bottomNavigationBar ?? null,
+          ),
           Positioned(
             bottom: 0,
             child: Image(
