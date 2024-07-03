@@ -32,6 +32,7 @@ class OffersScreen extends StatelessWidget {
       //   ],
       // ),
       body: TWhitePettern(
+        
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 100),
           child: SingleChildScrollView(

@@ -22,7 +22,7 @@ class _MahtarScreenState extends State<MahtarScreen> {
   @override
   Widget build(BuildContext context) {
     return TWhitePettern(
-      appbar: TDefaultAppbar(
+      appBar: TDefaultAppbar(
         showbackArrow: true,
         arrowColor: Colors.black,
       ),

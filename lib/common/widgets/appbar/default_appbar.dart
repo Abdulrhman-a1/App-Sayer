@@ -51,8 +51,8 @@ class TDefaultAppbar extends StatelessWidget implements PreferredSizeWidget {
           children: [
             Image.asset(
               TImages.Sayerlogo,
-              width: 50,
-              height: 50,
+              width: 45,
+              height: 45,
             ),
           ],
         ),
