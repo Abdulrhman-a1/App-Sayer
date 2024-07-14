@@ -9,8 +9,9 @@ import '../../controllers/otpController.dart';
 
 class VerifyPhoneNumScreen extends StatelessWidget {
   final OTPController otpController = Get.put(OTPController());
+  final String verificationId;
 
-  VerifyPhoneNumScreen({super.key});
+  VerifyPhoneNumScreen({super.key, required this.verificationId});
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +42,7 @@ class VerifyPhoneNumScreen extends StatelessWidget {
                     children: [
                       OTPHeader(),
                       const SizedBox(height: TSizes.spaceBtwSections / 2),
-                      OTPForm(),
+                      OTPForm(Otpcontroller: OTPController.verificationCode),
                       const SizedBox(height: TSizes.spaceBtwItems / 2),
                       SizedBox(
                         width: double.infinity,

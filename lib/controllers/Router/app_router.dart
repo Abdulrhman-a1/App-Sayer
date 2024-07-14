@@ -14,7 +14,10 @@ class AppRouter {
       case Routers.login:
         return MaterialPageRoute(builder: (_) => LoginScreen());
       case Routers.OTP:
-        return MaterialPageRoute(builder: (_) => VerifyPhoneNumScreen());
+        return MaterialPageRoute(
+            builder: (_) => VerifyPhoneNumScreen(
+                  verificationId: args as String,
+                ));
       case Routers.search:
         return MaterialPageRoute(builder: (_) => Searchscreen());
       default:

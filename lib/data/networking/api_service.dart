@@ -13,7 +13,7 @@ abstract class ApiService {
 
   // Car
 
-  @GET("/cars")
+  @GET("/cars") 
   Future<List<Car>> getCars();
 
   @GET("/cars/{id}")

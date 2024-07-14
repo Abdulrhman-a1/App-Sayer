@@ -1,3 +1,5 @@
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:sayeer/controllers/Router/routers.dart';
@@ -14,7 +16,7 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  final formKey = GlobalKey<FormState>();
+  final phoneNumberController = TextEditingController();
 
   @override
   void initState() {
@@ -38,8 +40,25 @@ class _LoginScreenState extends State<LoginScreen> {
                 children: [
                   TLoginHeader(),
                   TLoginForm(
-                    onSignIn: () => context.pushNamed(Routers.OTP),
-                    formKey: formKey,
+                    onSignIn: () {
+                      FirebaseAuth.instance.verifyPhoneNumber(
+                          phoneNumber: phoneNumberController.text,
+                          verificationCompleted: (phoneAuthCredential) {
+                            print(phoneAuthCredential);
+                          },
+                          verificationFailed: (error) {
+                            print(error.toString());
+                          },
+                          codeSent: (verificationId, resendToken) {
+                            context.pushNamed(Routers.OTP,
+                                arguments: verificationId);
+                          },
+                          codeAutoRetrievalTimeout: (verificationId) {
+                            print('Time Out');
+                          });
+                    },
+                    //() => context.pushNamed(Routers.OTP),
+                    PhoneNumberController: phoneNumberController,
                   ),
                 ],
               ),
